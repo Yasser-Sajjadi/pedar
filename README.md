@@ -72,73 +72,14 @@ main(){
 
 ```dart
 
-category = {
-    // Inheritance
-    this : (parent_category_1, parent_category_2);
-    /*
-    category : (parent_category_1, parent_category_2) = {
-    
+category: (parent_category_1, parent_category_2) = (parameter1,parameter2,parameter3) :> {
+    fun = (parameter4) :> {
+        // (parameter4) :> this;
+        // (parameter5) :> super; 
+        return (parameter1 + parameter2 + parameter3 + parameter4);
     }
-    */
-    // operator '->' forward parameter from category to parameter1,parameter2,parameter3 
-    this -> (parameter1,parameter2,parameter3);
-    /* similar code:
-        public category(var parameter1,var parameter2,var parameter3){
-        
-        }
-    */
-
-    fun = {
-        super -> parameter4;
-        // operator '<-' use for return response
-        this <- ((this -> parameter5) + parameter1 + parameter2 + parameter3 + parameter4);
-        return;
-    }
-    
-    this <- this;
-    // return;
+    return this;
 }
-
-// use '->' for call category
-a = (value1,value2,value3)->category;
-// category class with 3 parameters not included the fun function
-
-b = (value1,value2,value3,value4)->category;
-// category class with 4 parameters containing the fun function
-
-c = value1 -> (b.fun);
-
-// format, print
-fmt = ("Hello World!, %s %n","simple text", 1);
-// fmt = ["Hello World!, %s %n","simple text", 1]
-
-fmt -> text;
-// text = "Hello World!, simple text 1"
-// or ("Hello World!, %s %n","simple text", 1) -> text;
-text -> console;
-// print "Hello World!, simple text 1" in console
-
-// create new thread ':>'
-c = value1 :> (b.fun);
-
-// If we use the 'c' variable, the program will wait for the 'c' response.
-st = c -> stateof;
-
-// or without wait
-st = c :> stateof;
-
-//wait for c
-d = c + value5;
-
-st = (value1 :> b.fun) -> stateof;
-st = ( c = value1 :> b.fun) -> stateof;
-
-// eqaul to refrence ":="
-a = 3;
-b := a;
-a = 4;
-// b is 4
-
 ```
 
 # The Author
