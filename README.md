@@ -1,4 +1,4 @@
-# The Pedar Programming Language
+# The Pedar Programming Language - An Helpful Project for Programmer
 GNU General Public License v3.0
 (version 1.0.0 alpha 1)
 
